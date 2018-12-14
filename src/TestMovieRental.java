@@ -1,4 +1,5 @@
 import org.junit.*;
+
 import static org.junit.Assert.*;
 import java.util.Date;
 
@@ -57,9 +58,9 @@ public class TestMovieRental {
         Date end2 = new Date(2013, 7, 4);
         Date end3 = new Date(2013, 7, 5);
 
-        C1.addRental(new Rental(M1, start, end1));
-        C1.addRental(new Rental(M2, start, end2));
-        C1.addRental(new Rental(M3, start, end3));
+        C1.addRental(new Rental(M1, new DataRange(start, end1)));
+        C1.addRental(new Rental(M2, new DataRange(start, end2)));
+        C1.addRental(new Rental(M3, new DataRange(start, end3)));
         String ans = getAnswer1();
         assertTrue(ans.equals(C1.statement())); 
     }
@@ -69,8 +70,8 @@ public class TestMovieRental {
         Date start = new Date(2013, 7, 11);
         Date end1 = new Date(2013, 7, 12);
         Date end2 = new Date(2013, 7, 19);
-        C2.addRental(new Rental(M1, start, end1));
-        C2.addRental(new Rental(M3, start, end2));
+        C2.addRental(new Rental(M1, new DataRange(start, end1)));
+        C2.addRental(new Rental(M3, new DataRange(start, end2)));
         String ans = getAnswer2();
         assertTrue(ans.equals(C2.statement())); 
     }
@@ -80,8 +81,8 @@ public class TestMovieRental {
         Date start = new Date(2013, 6, 1);
         Date end1 = new Date(2013, 6, 3);
         Date end2 = new Date(2013, 6, 2);
-        C3.addRental(new Rental(M2, start, end1));
-        C3.addRental(new Rental(M3, start, end2));
+        C3.addRental(new Rental(M2, new DataRange(start, end1)));
+        C3.addRental(new Rental(M3, new DataRange(start, end2)));
         String ans = getAnswer3();
         assertTrue(ans.equals(C3.statement())); 
     }
