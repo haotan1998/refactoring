@@ -18,14 +18,11 @@ class Customer {
 
     public String statement() {
         StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
-
         for (Rental each : _rentals) {
-
             //show figures for this rental
             result.append("\t").append(each.getTitle());
             result.append("\t").append(String.valueOf(each.getCharge()));
             result.append("\n");
-
         }
 
         //add footer lines
