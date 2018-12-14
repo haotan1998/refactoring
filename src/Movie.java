@@ -22,6 +22,6 @@ public class Movie {
         this._priceCode = _priceCode;
     }
 
-    public Movie() {
+    public Movie(String title, int priceCode) {
     }
 }

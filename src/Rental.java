@@ -1,7 +1,7 @@
 import java.util.Date;
 
 class Rental {
-    private final Movie movie = new Movie();
+    private final Movie movie = new Movie("movie_title", Movie.REGULAR);
 
     private int _daysRented;
     public Rental(String title, int priceCode, Date start, Date end) {
