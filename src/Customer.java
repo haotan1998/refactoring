@@ -39,18 +39,10 @@ class Customer {
     public int getTotalFrequentRenterPoints() {
         int frequentRenterPoints = 0;
         for (Rental each : _rentals) {
-
-            // add frequent renter points
-            frequentRenterPoints++;
-            // add bonus for a two day new release rental
-            if ((each.getPriceCode() == Movie.NEW_RELEASE)
-                    && each.getDaysRented() > 1) frequentRenterPoints++;
-
-
+            frequentRenterPoints = each.getFrequentRenterPoints(frequentRenterPoints);
         }
         return frequentRenterPoints;
     }
-
 
     public double getTotalCharge() {
         double result = 0;
