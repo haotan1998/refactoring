@@ -24,13 +24,13 @@ public class TestMovieRental {
         C3 = new Customer("Manny");
 
         M1_Title = "Oz The Great and Powerful";
-        M1_PriceCode = Rental.NEW_RELEASE;
+        M1_PriceCode = Movie.NEW_RELEASE;
 
         M2_Title = "The Dark Knight";
-        M2_PriceCode = Rental.REGULAR;
+        M2_PriceCode = Movie.REGULAR;
 
         M3_Title = "Wreck-it Ralph";
-        M3_PriceCode = Rental.CHILDRENS;
+        M3_PriceCode = Movie.CHILDRENS;
     }
     private String getAnswer1() {
         StringBuilder ans = new StringBuilder("Rental Record for John\n");
