@@ -21,12 +21,14 @@ public class Movie {
     public void setPriceCode(int arg) {
         switch (arg) {
             case REGULAR:
-            _price = new RegularPrice(); break;
+            _price = new RegularPrice();
+            break;
             case CHILDRENS:
                 _price = new ChildrensPrice();
                 break;
             case NEW_RELEASE:
-                _price = new NewReleasePrice(); break;
+                _price = new NewReleasePrice();
+                break;
             default:
                 throw new IllegalArgumentException("Incorrect Price Code");
         }
@@ -41,11 +43,13 @@ public class Movie {
         return _price.getCharge(daysRented);
     }
 
-    int getFrequentRenterPoints(int frequentRenterPoints, int daysRented) {
-        frequentRenterPoints ++;
+    int getFrequentRenterPoints(int daysRented) {
+        /*
+        int frequentRenterPoints = 1;
         // add bonus for a two day new release rental
         if ((getPriceCode() == Movie.NEW_RELEASE)
                 && daysRented > 1) frequentRenterPoints++;
-        return frequentRenterPoints;
+                */
+        return _price.getFrequentRenterPoints(daysRented);
     }
 }

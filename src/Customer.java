@@ -36,7 +36,7 @@ class Customer {
     public int getTotalFrequentRenterPoints() {
         int frequentRenterPoints = 0;
         for (Rental each : _rentals) {
-            frequentRenterPoints = each.getFrequentRenterPoints(frequentRenterPoints);
+            frequentRenterPoints += each.getFrequentRenterPoints();
         }
         return frequentRenterPoints;
     }
